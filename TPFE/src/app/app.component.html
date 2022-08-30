@@ -1,0 +1,38 @@
+<div class="theme">
+  <div class="container-fluid main-page">
+    <!-- <header > -->
+      <!-- class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark" -->
+    <div>
+    <!-- OLD STYLES FROM ABOVE DIV class="container-fluid d-flex align-items-center" -->
+  
+      <nav class="navbar navbar-expand-lg navbar-light navcol">
+        <a class="navbar-brand nav-pad" href="#"><h3>Tiger Phone Navigation</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active nav-pad" href="#"><h4>Home</h4></a>
+            <a routerLink="Users" class="nav-item nav-link nav-pad" href="#"><h4>Users</h4></a>
+            <a routerLink="Devices" class="nav-item nav-link nav-pad" href="#"><h4>Devices</h4></a>
+            <a routerLink="Plans" class="nav-item nav-link nav-pad" href="#"><h4>Plans</h4></a>
+          </div>
+        </div>
+      </nav>
+  
+      <a href="#" class="navbar-brand">
+        <h1 class="title">Welcome to Tiger Phone</h1>
+        <!-- class="d-flex align-items-center fs-80 text-white mb-0" -->
+      </a>
+      <p class="byline">Finally, a phone company with teeth!</p>
+    </div>
+  <!-- </header> -->
+    <div class="container mt-3">
+      <router-outlet></router-outlet>
+    </div>
+    <footer class="footer">
+      <p>Project 2 by John Pae and Douglas Rosenberg</p>
+      <p><a href="mailto:drosenberg@skillstorm.com">DRosenberg@Skillstorm.com</a></p>
+    </footer>
+  </div>
+  </div>
