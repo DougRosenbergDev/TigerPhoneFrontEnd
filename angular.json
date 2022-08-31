@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tpfe",
+            "outputPath": "dist/tigerphone",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "TPFE:build:production"
+              "browserTarget": "tigerphone:build:production"
             },
             "development": {
-              "browserTarget": "TPFE:build:development"
+              "browserTarget": "tigerphone:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "TPFE:build"
+            "browserTarget": "tigerphone:build"
           }
         },
         "test": {
