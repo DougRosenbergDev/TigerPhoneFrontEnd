@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>User</h1>
+    <!-- <a href="#" routerLink="/Passengers/create/" class="btn btn-success">+ Create A Passenger</a> -->
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-active" *ngFor="let user of users">
+                <td>{{ user.userName }}</td>
+                <td>{{ user.phoneNumber }}</td>
+                
+                <td>
+                    <!-- <a href="#" [routerLink]="['/passenger/', passenger.id]" class="btn btn-primary">Details</a>
+                    <a href="#" [routerLink]="['/Passengers/edit/', passenger.id]" class="btn btn-info">Edit</a>
+                    <button type="button" (click)="deletePassenger(passenger.id)" class="btn btn-danger">Delete</button> -->
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
