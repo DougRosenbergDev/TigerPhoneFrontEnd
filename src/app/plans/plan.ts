@@ -1,10 +1,10 @@
-export interface User {
+export interface Plan {
     id: number;
     userName: string;
     email: string;
 }
 
-export interface UserDTO {
+export interface PlanDTO {
     userName: string;
     email: string;
 }

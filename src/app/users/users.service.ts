@@ -8,7 +8,7 @@ import { User, UserDTO } from './user';
   providedIn: 'root'
 })
 export class UsersService {
-  private userUrl = 'https://localhost:7289/api/users';
+  private userUrl = 'https://localhost:7082/api/users';
 
   private httpOptions = {
     headers: new HttpHeaders({
