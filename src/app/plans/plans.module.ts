@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IndexComponent } from './index/index.component';
+import { PIndexComponent } from './index/index.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PlansRoutingModule } from './plans-routing-module';
+import { ViewComponent } from './viewbyid/viewbyid.component';
 
 @NgModule({
   declarations: [
-    IndexComponent
+    PIndexComponent,
+    ViewComponent
   ],
   imports: [
     CommonModule,

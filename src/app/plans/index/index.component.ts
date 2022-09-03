@@ -7,17 +7,17 @@ import { PlansService } from '../plans.service';
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css']
 })
-export class IndexComponent implements OnInit {
-  users: Plan[] = [];
+export class PIndexComponent implements OnInit {
+  plans: Plan[] = [];
 
   // ask angular to inject musicService
   constructor(private planService: PlansService) {}
 
   ngOnInit(): void {
-    this.retrieveUsers();
+    this.retrievePlans();
   }
 
-  retrieveUsers(): void {
+  retrievePlans(): void {
     this.planService.getPlans().subscribe(plans => this.plans = plans);
   }
 

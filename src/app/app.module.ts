@@ -4,18 +4,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
-import { PlansComponent } from './plans/plans.component';
 import { DevicesComponent } from './devices/devices.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsersModule } from './users/users.module';
 import { DevicesModule } from './devices/devices.module';
 import { PlansModule } from './plans/plans.module';
 import { CardComponent } from './card/card.component';
+import { ViewComponent } from './plans/viewbyid/viewbyid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
+    // ViewComponent,
     // UsersComponent,
     // PlansComponent,
     // DevicesComponent
@@ -28,7 +29,7 @@ import { CardComponent } from './card/card.component';
     HttpClientModule,
     UsersModule,
     DevicesModule,
-    PlansModule
+    // PlansModule
   ],
   providers: [],
   bootstrap: [AppComponent]
