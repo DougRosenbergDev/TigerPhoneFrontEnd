@@ -9,7 +9,11 @@ import { ViewComponent } from "./viewbyid/viewbyid.component";
 const routes: Routes = [
     { path: 'Plans', redirectTo: 'Plans/index', pathMatch: 'full' },
     { path: 'Plans/index', component: PIndexComponent },
+
+    // { path: 'Plans/device/:id', component: DeviceOnEachPlan },
+    
     // { path: 'Passengers/create', component: PCreateComponent },
+    { path: 'Plan/:id?userId="userId"', component: ViewComponent },
     { path: 'Plan/:id', component: ViewComponent },
     // { path: 'Passengers/edit/:id', component: EditComponent },
 

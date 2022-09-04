@@ -12,6 +12,7 @@ export class ViewComponent implements OnInit {
 
   id! : number;
   plan!: Plan;
+  userId!: number;
 
   constructor(
     public planservice: PlansService,
@@ -21,6 +22,7 @@ export class ViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
+    this.userId = this.route.snapshot.params['userId'];
 
     this.planservice.getPlan(this.id).subscribe((data: Plan)=>{
       this.plan = data;
