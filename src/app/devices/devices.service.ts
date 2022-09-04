@@ -7,7 +7,10 @@ import { Device, DeviceDTO } from './device';
   providedIn: 'root'
 })
 export class DevicesService {
-  private deviceUrl = 'https://localhost:7082/api/device/';
+  //azure db endpoint
+  private deviceUrl = "tigerbackend6.database.windows.net/device"
+  // for local development
+  // private deviceUrl = 'https://localhost:7082/api/device/';
 
   private httpOptions = {
     headers: new HttpHeaders({
