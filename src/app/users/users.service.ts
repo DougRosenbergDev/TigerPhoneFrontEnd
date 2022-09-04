@@ -8,7 +8,10 @@ import { User, UserDTO } from './user';
   providedIn: 'root'
 })
 export class UsersService {
-  private userUrl = 'https://localhost:7082/api/users';
+  //azure deployment
+  private userUrl = 'tigerbackend6.database.windows.net/users';
+  //local dev
+  // private userUrl = 'https://localhost:7082/api/users/';
 
   private httpOptions = {
     headers: new HttpHeaders({
