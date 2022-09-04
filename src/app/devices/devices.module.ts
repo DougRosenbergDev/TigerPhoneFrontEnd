@@ -4,11 +4,13 @@ import { DIndexComponent } from './index/index.component';
 import { ViewComponent } from './viewbyid/viewbyid.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DeviceRoutingModule } from './device-routing-module';
+// import { DevicesoneachplanComponent } from '../plans/devicesoneachplan/devicesoneachplan.component';
 
 @NgModule({
   declarations: [
     DIndexComponent,
-    ViewComponent
+    ViewComponent,
+    // DevicesoneachplanComponent
   ],
   imports: [
     CommonModule,
