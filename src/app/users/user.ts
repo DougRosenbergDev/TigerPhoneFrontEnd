@@ -1,10 +1,10 @@
 export interface User {
     id: number;
     userName: string;
-    phoneNumber: string;
+    email: string;
 }
 
 export interface UserDTO {
     userName: string;
-    phoneNumber: string;
+    email: string;
 }
