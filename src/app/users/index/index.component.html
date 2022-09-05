@@ -6,6 +6,7 @@
             <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
+                <!-- <th scope="col">Plans</th> -->
                 <th>Edit</th>
             </tr>
         </thead>
@@ -13,11 +14,16 @@
             <tr class="table-active" *ngFor="let user of users">
                 <td>{{ user.userName }}</td>
                 <td>{{ user.email }}</td>
+                <!-- <td>{{ user.plans }}</td> -->
                 
                 <td>
-                    <!-- <a href="#" [routerLink]="['/passenger/', passenger.id]" class="btn btn-primary">Details</a>
-                    <a href="#" [routerLink]="['/Passengers/edit/', passenger.id]" class="btn btn-info">Edit</a>
-                    <button type="button" (click)="deletePassenger(passenger.id)" class="btn btn-danger">Delete</button> -->
+                    <!-- <a href="#" [routerLink]="['/passenger/', passenger.id]" class="btn btn-primary">Details</a> -->
+                    <!-- <a href="#" [routerLink]="['/Passengers/edit/', passenger.id]" class="btn btn-info">Edit</a> -->
+                    <a href="#" [routerLink]="['/user/', user.id]" class="btn btn-info">Plans</a>
+                    <!-- <a [routerLink]="['user']" [queryParams]="{planId: plan.id}">Edit info</a> -->
+
+
+                    <!-- <button type="button" (click)="deletePassenger(passenger.id)" class="btn btn-danger">Delete</button>  -->
                 </td>
                 
             </tr>
