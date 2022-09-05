@@ -3,15 +3,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { from, Observable, throwError } from 'rxjs';
 import { catchError, of } from 'rxjs';
 import { User, UserDTO } from './user';
+import { Plan } from '../plans/plan';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
-  //azure deployment
-  private userUrl = 'tigerbackend6.database.windows.net/users';
-  //local dev
-  // private userUrl = 'https://localhost:7082/api/users/';
+  //azure db endpoint
+  private userUrl = "tigerbackend6.database.windows.net/users"
+  // for local development
+  // private userUrl = 'https://localhost:7215/api/user/';
+  // private planUrl = 'https://localhost:7215/api/user/plans';
+
 
   private httpOptions = {
     headers: new HttpHeaders({
@@ -29,6 +32,10 @@ export class UsersService {
     let url = `${this.userUrl}/${id}`;
     return this.http.get<User>(url, this.httpOptions);
   }
+
+  // getPlans(): Observable<Plan[]>{
+  //   return this.http.get<Plan[]>(this.userUrl.this.httpOptions);
+  // }
   
   createUser(user: User): Observable<User> {
     return this.http.post<User>(this.userUrl, user, this.httpOptions);

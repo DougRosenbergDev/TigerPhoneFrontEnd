@@ -10,11 +10,13 @@ import { DevicesModule } from './devices/devices.module';
 import { PlansModule } from './plans/plans.module';
 import { CardComponent } from './card/card.component';
 import { ViewComponent } from './plans/viewbyid/viewbyid.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
+    LoginComponent,
     // ViewComponent,
     // UsersComponent,
     // PlansComponent,
