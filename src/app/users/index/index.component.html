@@ -1,7 +1,8 @@
 <div class="container">
-    <h1>User</h1>
-    <!-- <a href="#" routerLink="/Passengers/create/" class="btn btn-success">+ Create A Passenger</a> -->
-    <table class="table table-bordered table-striped table-hover">
+    <h1 class="title">User</h1>
+    <!-- <a href="#" routerLink="/user/create/" class="btn btn-success">+ Add A Plan</a> --> -->
+    <!-- <a href="#" routerLink="/user/create/" class="btn btn-success">+ Add A Device</a> --> -->
+    <table class="table table-bordered table-striped table-hover custom-text">
         <thead>
             <tr>
                 <th scope="col">Name</th>
@@ -21,9 +22,9 @@
                     <!-- <a href="#" [routerLink]="['/Passengers/edit/', passenger.id]" class="btn btn-info">Edit</a> -->
                     <a href="#" [routerLink]="['/user/', user.id]" class="btn btn-info">Plans</a>
                     <!-- <a [routerLink]="['user']" [queryParams]="{planId: plan.id}">Edit info</a> -->
-
-
-                    <!-- <button type="button" (click)="deletePassenger(passenger.id)" class="btn btn-danger">Delete</button>  -->
+                    <button type="button"  class="btn btn-secondary">Devices</button> 
+                    <button type="button"  class="btn btn-danger">Delete</button> 
+                    <!-- (click)="deletePassenger(passenger.id)" -->
                 </td>
                 
             </tr>

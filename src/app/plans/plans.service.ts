@@ -9,9 +9,9 @@ import { Plan, PlanDTO } from './plan';
 export class PlansService {
  
   //azure deployment
-  private planUrl = 'tigerbackend6.database.windows.net/plan';
+  // private planUrl = 'tigerbackend6.database.windows.net/plan';
   //local dev
-  // private planUrl = 'https://localhost:7082/api/plan/';
+  private planUrl = 'https://localhost:7081/api/plan/';
 
 
   private httpOptions = {
