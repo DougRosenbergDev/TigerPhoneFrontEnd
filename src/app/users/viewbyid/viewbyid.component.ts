@@ -4,6 +4,7 @@ import { UsersService } from '../users.service';
 import { PlansService } from 'src/app/plans/plans.service';
 import { User } from '../user';
 import { Plan } from 'src/app/plans/plan';
+import { EmailValidator } from '@angular/forms';
 
 @Component({
   selector: 'app-viewbyid',
@@ -14,6 +15,7 @@ export class ViewComponent implements OnInit {
 
   id! : number;
   user!: User;
+  plan!: Plan;
   userId!: number;
   // userName!: 
 
@@ -25,10 +27,10 @@ export class ViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
-    this.userId = this.route.snapshot.params['userId'];
+    // this.userId = this.route.snapshot.params['userId'];
     // this.userName = this.route.snapshot.params['userId'];
 
-    this.userService.getUser(this.id).subscribe((data: User)=>{
+    this.userService.getUser(this.id, this.id).subscribe((data: User)=>{
       this.user = data;
     });
 
