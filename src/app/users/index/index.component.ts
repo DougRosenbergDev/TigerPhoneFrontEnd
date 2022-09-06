@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { UsersService } from '../users.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Plan } from 'src/app/plans/plan';
+import { Device } from 'src/app/devices/device';
 
 @Component({
   selector: 'app-index',
@@ -9,7 +11,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  id!: number;
   users: User[] = [];
+  plans: Plan[] = [];
+  devices: Device[] = [];
   // id!: number;
 
   // ask angular to inject musicService
@@ -26,8 +31,12 @@ export class IndexComponent implements OnInit {
 
   // retrievePlans(): void {
   //   this.rout.queryParams.subscribe(param => {
-  //     this.id = param['userId'];
+  //     this.plans = param['plans'];
   //   });
+  // }
+
+  // retrievePlans(): void {
+  //   this.userService.getUserPlans().subscribe(plans => this.plans = plans);
   // }
 
   retrieveUsers(): void {

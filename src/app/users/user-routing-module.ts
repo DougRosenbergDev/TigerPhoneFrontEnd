@@ -8,7 +8,7 @@ import { ViewComponent } from "./viewbyid/viewbyid.component";
 const routes: Routes = [
     { path: 'User', redirectTo: 'User/index', pathMatch: 'full' },
     { path: 'User/index', component: IndexComponent },
-    // { path: 'User/:id?userId=:userId', component: ViewComponent },
+    // { path: 'User/:id/Plans?userId=:userId', component: ViewComponent },
     { path: 'User/:id', component: ViewComponent },
     // { path: 'Passengers/create', component: PCreateComponent },
     // { path: 'passenger/:id', component: ViewComponent },

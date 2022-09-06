@@ -10,7 +10,9 @@ import { Plan } from '../plans/plan';
 })
 export class UsersService {
   //azure db endpoint
-  private userUrl = "https://tigerbackend8.azurewebsites.net/api/user"
+  private userUrl = "https://tigerbackend8.azurewebsites.net/api/User";
+  private userIdUrl = "https://tigerbackend8.azurewebsites.net/api/User/1?userId:userId";
+  private userPlansUrl = "https://tigerbackend8.azurewebsites.net/api/User/1/Plans?userId=1";
   // for local development
   // private userUrl = 'https://localhost:7081/api/User';
   // private planUrl = 'https://localhost:7215/api/user/plans';
@@ -28,13 +30,13 @@ export class UsersService {
     return this.http.get<User[]>(this.userUrl, this.httpOptions);
   }
   
-  getUser(id: number): Observable<User> {
-    let url = `${this.userUrl}/${id}`;
+  getUser(id: number, userId: number): Observable<User> {
+    let url = `${this.userUrl}/${id}?userId=${userId}`;
     return this.http.get<User>(url, this.httpOptions);
   }
 
-  // getPlans(): Observable<Plan[]>{
-  //   return this.http.get<Plan[]>(this.userUrl.this.httpOptions);
+  // getUserPlans(): Observable<Plan[]>{
+  //   return this.http.get<Plan[]>(this.userPlansUrl.this.httpOptions);
   // }
   
   createUser(user: User): Observable<User> {
