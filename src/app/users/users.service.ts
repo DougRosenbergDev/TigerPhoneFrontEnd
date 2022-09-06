@@ -10,9 +10,9 @@ import { Plan } from '../plans/plan';
 })
 export class UsersService {
   //azure db endpoint
-  // private userUrl = "tigerbackend6.database.windows.net/users"
+  private userUrl = "https://tigerbackend8.azurewebsites.net/api/user"
   // for local development
-  private userUrl = 'https://localhost:7215/api/user/';
+  // private userUrl = 'https://localhost:7081/api/User';
   // private planUrl = 'https://localhost:7215/api/user/plans';
 
 
