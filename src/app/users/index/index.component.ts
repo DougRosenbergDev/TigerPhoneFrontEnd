@@ -35,9 +35,9 @@ export class IndexComponent implements OnInit {
   //   });
   // }
 
-  // retrievePlans(): void {
-  //   this.userService.getUserPlans().subscribe(plans => this.plans = plans);
-  // }
+  retrievePlans(): void {
+    this.userService.getUserPlans().subscribe(plans => this.plans = plans);
+  }
 
   retrieveUsers(): void {
     this.userService.getUsers().subscribe(users => this.users = users);
