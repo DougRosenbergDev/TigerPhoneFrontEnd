@@ -30,7 +30,7 @@ export class IndexComponent implements OnInit {
   ngOnInit(): void {
     this.retrieveUsers();
     this.retrievePlans();
-    this.retrieveDevices();
+    // this.retrieveDevices();
   }
 
   // retrievePlans(): void {
@@ -50,10 +50,10 @@ export class IndexComponent implements OnInit {
     // console.log(this.plans[0]);
   }
 
-  retrieveDevices(): void {
-    this.userService.getUserPlans().subscribe(plans => this.plans = plans);
-    // console.log(this.plans[0]);
-  }
+  // retrieveDevices(): void {
+  //   this.userService.getUserDevicess().subscribe(devices => this.devices = devices);
+  //   console.log(this.plans[0]);
+  // }
 
   deleteDevice(id:number) {
     this.devicesService.deleteDevice(id).subscribe(res => {

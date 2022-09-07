@@ -11,9 +11,9 @@ export class DevicesService {
   //azure db endpoint
   
   //azure deployment
-  // private deviceUrl = 'tigerbackend6.database.windows.net/device';
+  private deviceUrl = 'tigerbackend6.database.windows.net/device';
   //local dev
-  private deviceUrl = 'https://localhost:7081/api/device/';
+  // private deviceUrl = 'https://localhost:7081/api/device/';
 
 
   private httpOptions = {

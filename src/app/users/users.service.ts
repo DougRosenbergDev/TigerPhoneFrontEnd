@@ -5,13 +5,14 @@ import { catchError, of } from 'rxjs';
 import { User, UserDTO } from './user';
 import { Plan, PlanDTO } from '../plans/plan';
 import { Device } from '../devices/device';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
   //azure db endpoint
-  private userUrl = "https://tigerbackend8.azurewebsites.net/api/User";
+  private userUrl = `${environment.apiUrl}/User`;
   private userIdUrl = "https://tigerbackend8.azurewebsites.net/api/User/1?userId:userId";
   private userPlansUrl = "https://tigerbackend8.azurewebsites.net/api/User/:id/Plans?userId=:userId";
   private userDevicesUrl = "https://tigerbackend8.azurewebsites.net/api/User/Devices";
@@ -33,6 +34,11 @@ export class UsersService {
   }
   
   getUser(id: number, userId: number): Observable<User> {
+    let url = `${this.userUrl}/plans`;
+    return this.http.get<User>(url, this.httpOptions);
+  }
+
+  getUserPlan(id: number, userId: number): Observable<User> {
     let url = `${this.userUrl}/${id}?userId=${userId}`;
     return this.http.get<User>(url, this.httpOptions);
   }
@@ -61,7 +67,7 @@ export class UsersService {
   deleteDevices(id: Number): Observable<Device> {
     return this.http.delete<Device>(`${this.userDevicesUrl}/${id}`, this.httpOptions);
   }
-  
+
   deletePlans(id: Number): Observable<User> {
     return this.http.delete<User>(`${this.userUrl}/${id}`, this.httpOptions);
   }

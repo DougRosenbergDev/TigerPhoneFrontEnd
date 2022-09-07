@@ -14,10 +14,13 @@
                 <!-- <th>Edit</th> -->
             </tr>
         </thead>
-        <tbody>
+        <tbody class="table-anchors">
             <tr class="table-active" *ngFor="let user of users">
                 
-                <td>{{ user.userName }}</td>
+                <td>{{ user.userName }}
+                    <a href="#" [routerLink]="['/User/' + user.id]" class="btn btn-secondary table-anchors">Details</a>
+
+                </td>
                 
                 <td>{{ user.email }}</td>
 
@@ -25,8 +28,8 @@
                     <a href="#" [routerLink]="['/User/' + user.id]" ></a>
                     <!-- <p>should show data</p> -->
                     <button  type="button"  class="btn btn-secondary">Plans</button> 
-
-                    <button type="button"  class="btn btn-danger">Delete</button> 
+                        {{ plans }}
+                    <button type="button" class="btn btn-danger">Delete</button> 
                     <!-- (click)="deletePassenger(passenger.id)" -->
                 </td>
 
@@ -42,8 +45,8 @@
                     <!-- (click)="deletePassenger(passenger.id)" -->
                 </td>
                 <td>
-                    <a href="#" [routerLink]="['/User/' + user.id]" class="btn btn-info">Plans</a>
-                    <a href="#" [routerLink]="['/User/' + user.id]" class="btn btn-info">Devices</a>
+                    <a href="#" [routerLink]="['/Plans']" class="btn btn-info">Plans</a>
+                    <a href="#" [routerLink]="['/Devices']" class="btn btn-secondary">Devices</a>
                     <button type="button"  class="btn btn-danger">Delete User</button> 
 
                 </td>
