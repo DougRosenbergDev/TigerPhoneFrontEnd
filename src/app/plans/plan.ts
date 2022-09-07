@@ -4,7 +4,7 @@ export interface Plan {
     planPrice: number;
     profileId: number;
     deviceLimit: number;
-    devices: string;
+    devices: [];
 }
 
 export interface PlanDTO {
@@ -12,5 +12,5 @@ export interface PlanDTO {
     planPrice: number;
     profileId: number;
     deviceLimit: number;
-    devices: string;
+    devices: [];
 }

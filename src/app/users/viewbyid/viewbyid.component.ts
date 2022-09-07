@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Type } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from '../users.service';
 import { PlansService } from 'src/app/plans/plans.service';
 import { User } from '../user';
 import { Plan } from 'src/app/plans/plan';
 import { EmailValidator } from '@angular/forms';
+import { Device } from 'src/app/devices/device';
 
 @Component({
   selector: 'app-viewbyid',
@@ -17,6 +18,8 @@ export class ViewComponent implements OnInit {
   user!: User;
   plan!: Plan;
   userId!: number;
+  deviceProfiles!: Device;
+  type!: string;
   // userName!: 
 
   constructor(

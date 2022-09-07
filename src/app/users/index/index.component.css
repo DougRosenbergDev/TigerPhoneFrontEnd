@@ -11,3 +11,7 @@
 .custom-text {
     font-weight: 900;
 }
+
+.table-anchors {
+    justify-content: end;
+}
