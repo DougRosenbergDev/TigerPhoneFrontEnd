@@ -12,9 +12,10 @@ import { Device } from 'src/app/devices/device';
 })
 export class IndexComponent implements OnInit {
   id!: number;
-  users: User[] = [];
-  plans: Plan[] = [];
+  users?: User[];
+  plans?: Plan[];
   devices: Device[] = [];
+  // planName: 
   // id!: number;
 
   // ask angular to inject musicService
@@ -26,7 +27,7 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.retrieveUsers();
-    // this.retrievePlans();
+    this.retrievePlans();
   }
 
   // retrievePlans(): void {
@@ -35,12 +36,20 @@ export class IndexComponent implements OnInit {
   //   });
   // }
 
-  retrievePlans(): void {
-    this.userService.getUserPlans().subscribe(plans => this.plans = plans);
-  }
 
   retrieveUsers(): void {
     this.userService.getUsers().subscribe(users => this.users = users);
+    console.log(this.users);
+  }
+
+  retrievePlans(): void {
+    this.userService.getUserPlans().subscribe(plans => this.plans = plans);
+    // console.log(this.plans[0]);
+  }
+
+  retrieveDevices(): void {
+    this.userService.getUserPlans().subscribe(plans => this.plans = plans);
+    // console.log(this.plans[0]);
   }
 
 }
