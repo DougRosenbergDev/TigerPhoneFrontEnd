@@ -22,8 +22,10 @@
                 <td>{{ user.email }}</td>
 
                 <td>
-                    <a href="#" [routerLink]="['/User/' + user.id]" class="btn btn-info"></a>{{ user }}
-                    <p>should show data</p>
+                    <a href="#" [routerLink]="['/User/' + user.id]" ></a>
+                    <!-- <p>should show data</p> -->
+                    <button  type="button"  class="btn btn-secondary">Plans</button> 
+
                     <button type="button"  class="btn btn-danger">Delete</button> 
                     <!-- (click)="deletePassenger(passenger.id)" -->
                 </td>
@@ -31,10 +33,12 @@
                 <td>
                     <!-- <a href="#" [routerLink]="['/passenger/', passenger.id]" class="btn btn-primary">Details</a> -->
                     <!-- <a href="#" [routerLink]="['/Passengers/edit/', passenger.id]" class="btn btn-info">Edit</a> -->
-                    <a href="#" [routerLink]="['/User/' + user.id]" class="btn btn-info"></a>{{ user.devices }}
+                    <a href="#" [routerLink]="['/User/' + user.id]" ></a>{{ user.devices }}
                     <!-- <a [routerLink]="['user']" [queryParams]="{planId: plan.id}">Edit info</a> -->
-                    <button  type="button"  class="btn btn-secondary">Devices</button> 
+                    <button  type="button"  class="btn btn-secondary">Devices</button>
                     <button type="button"  class="btn btn-danger">Delete</button> 
+
+                    <!-- <button type="button" (click)="deleteDevice(devices.id)" class="btn btn-danger">Delete</button>  -->
                     <!-- (click)="deletePassenger(passenger.id)" -->
                 </td>
                 <td>

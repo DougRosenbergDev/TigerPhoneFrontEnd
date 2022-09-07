@@ -57,5 +57,15 @@ export class UsersService {
   deleteUser(id: Number): Observable<User> {
     return this.http.delete<User>(`${this.userUrl}/${id}`, this.httpOptions);
   }
+
+  deleteDevices(id: Number): Observable<Device> {
+    return this.http.delete<Device>(`${this.userDevicesUrl}/${id}`, this.httpOptions);
+  }
+  
+  deletePlans(id: Number): Observable<User> {
+    return this.http.delete<User>(`${this.userUrl}/${id}`, this.httpOptions);
+  }
+
+
   
 }
